@@ -1,0 +1,23 @@
+.disclaimer{
+    font-size: 0.73em;
+}
+.disclaimerBox{
+    width: 50%;
+}
+.img-fluid{
+    height: 30em;
+}
+
+.bg-image {
+    /* The image used */
+    background-image: url("../../assets/img/hall.jpeg");
+  
+    /* Set a specific height */
+    height: 50em;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
