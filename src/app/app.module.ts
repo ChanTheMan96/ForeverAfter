@@ -31,6 +31,7 @@ import { PhotosComponent } from './photos/photos.component';
 import { BarComponent } from './bar/bar.component';
 import { PricesComponent } from './prices/prices.component';
 import { FormsModule } from '@angular/forms';
+import { LightgalleryModule } from 'lightgallery/angular';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { FormsModule } from '@angular/forms';
     MdbTooltipModule,
     MdbValidationModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    LightgalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

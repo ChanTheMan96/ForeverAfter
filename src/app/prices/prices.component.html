@@ -1,66 +1,141 @@
 <app-nav></app-nav>
 <div class="p-5 text-center bg-image">
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div>
-            <div class="text-white p-3">
-                <div class="container text-center">
-                    <h1>Get an Estimate</h1>
-                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 justify-content-center">
-                        <div class="col">
-                            <div class="p-3">
-                                <label for="guest">Number Of Guest</label>
-                                <input type="number" min="0" class="form-control" id="guest" [(ngModel)]="guest" (change)="getPrice()">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div>
+                <div class="text-white p-3">
+                    <div class="container text-center">
+                        <h1>Get an Estimate</h1>
+                        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 justify-content-center">
+                            <div class="col">
+                                <div class="p-3">
+                                    <label for="guest">Number Of Guest</label>
+                                    <input type="number" min="50" max="350" class="form-control" id="guest" [(ngModel)]="guest"
+                                        (keyup)="getPrice()">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="p-3">
-                                <div class="form-group">
-                                    <label for="bar">Bar Option</label>
-                                    <select class="form-control" id="bar" [(ngModel)]="bar" (change)="getPrice()">
-                                        <option value="Standard" selected>Standard</option>
-                                        <option value="Premium">Premium</option>
-                                    </select>
+                            <div class="col">
+                                <div class="p-3">
+                                    <div class="form-group">
+                                        <label for="bar">Bar Option</label>
+                                        <select class="form-control" id="bar" [(ngModel)]="bar" (change)="getPrice()">
+                                            <option value="Standard" selected>Standard</option>
+                                            <option value="Premium">Premium</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3">
+                                    <div class="form-group">
+                                        <label for="day">Day Option</label>
+                                        <select class="form-control" id="day" [(ngModel)]="day" (change)="getPrice()">
+                                            <option value="Weekend" selected>Weekend</option>
+                                            <option value="Weekday">Weekday</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-3">
+                                    <h4>Total</h4>
+                                    <h5>{{total | currency}}*</h5>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="p-3">
-                                <div class="form-group">
-                                    <label for="day">Day Option</label>
-                                    <select class="form-control" id="day" [(ngModel)]="day" (change)="getPrice()">
-                                        <option value="Weekend" selected>Weekend</option>
-                                        <option value="Weekday">Weekday</option>
-                                    </select>
+                        <div>
+                            <div>
+                                <button class="btn btn-primary" type="button" (click)="basicCollapse.toggle()"
+                                    [attr.aria-expanded]="!basicCollapse.collapsed" aria-controls="collapseExample">
+                                    Add Ons
+                                </button>
+                                <!--Collapsed content-->
+                                <div class="mt-3" id="collapseExample" mdbCollapse #basicCollapse="mdbCollapse">
+                                    <div class="form-check form-check-inline">
+                                        <input
+                                        (change)="onChange(150)"
+                                          mdbCheckbox
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          id="inlineCheckbox1"
+                                          value="150"
+                                        />
+                                        <label class="form-check-label" for="inlineCheckbox1">Fog Entrance</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input
+                                        (change)="onChange(200)"
+                                          mdbCheckbox
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          value="200"
+                                        />
+                                        <label class="form-check-label" for="inlineCheckbox2">Water Service</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input
+                                        (change)="onChange(200)"
+                                          mdbCheckbox
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          value="200"
+                                        />
+                                        <label class="form-check-label" >Cake Cutting</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input
+                                        (change)="onChange(50)"
+                                          mdbCheckbox
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          value="350"
+                                        />
+                                        <label class="form-check-label" >Sparkler Exit</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input
+                                        (change)="onChange(4)"
+                                          mdbCheckbox
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          value="4"
+                                        />
+                                        <label class="form-check-label" >Ceramic White Place Setting</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input
+                                        (change)="onChange(2)"
+                                          mdbCheckbox
+                                          class="form-check-input"
+                                          type="checkbox"
+                                          value="2"
+                                        />
+                                        <label class="form-check-label" >Champagne Toast</label>
+                                      </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="p-3">
-                                <h4>Total</h4>
-                                <h5>{{total | currency}}*</h5>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="justify-content-center">
-                    <div class="text-center">
-                        <span class="disclaimer">*Please be advised that all prices quoted for our event center services are subject
-                            to
-                            change without prior notice. Forever After reserves the right to adjust prices based on factors such as
-                            market conditions, operational costs, or any other unforeseen circumstances.</span>
+                    <div class="justify-content-center">
+                        <div class="text-center">
+                            <span class="disclaimer">*Please be advised that all prices quoted for our event center
+                                services are subject
+                                to
+                                change without prior notice. Forever After reserves the right to adjust prices based on
+                                factors such as
+                                market conditions, operational costs, or any other unforeseen circumstances.</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 
 <div class="text-center">
     <div class="container">
         <h2 class="mt-4 mb-4">Price List</h2>
-        
+
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
@@ -171,18 +246,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"> Security For Five Hours
-
-                        </h5>
-                        <h6>$250</h6>
-                    </div>
-                </div>
-            </div>
-
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-body">
