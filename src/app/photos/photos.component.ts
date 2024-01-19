@@ -8,7 +8,7 @@ import lgZoom from 'lightgallery/plugins/zoom';
   styleUrls: ['./photos.component.scss']
 })
 export class PhotosComponent {
-  arr = new Array(61);
+  arr = new Array(30);
   settings = {
     counter: false,
     plugins: [lgZoom],
@@ -17,5 +17,11 @@ export class PhotosComponent {
     const { index, prevIndex } = detail;
     console.log(index, prevIndex);
   };
+
+  logCondition(value: number): boolean {
+    console.log(value)
+    console.log('Condition Check:', ![18].includes(value));
+    return ![18].includes(value);
+}
 
 }

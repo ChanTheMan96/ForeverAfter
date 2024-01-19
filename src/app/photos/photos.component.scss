@@ -2,3 +2,7 @@
 @import '../../../node_modules/lightgallery/scss/lg-zoom.scss';
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css');
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css');
+.gallery-image {
+    height: 300px; /* Set your desired fixed height */
+    object-fit: cover;
+}

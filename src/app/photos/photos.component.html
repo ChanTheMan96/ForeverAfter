@@ -1,11 +1,19 @@
 <app-nav></app-nav>
-<div class="p-2 w-100 pb-5 mt-5 d-flex justify-content-center">
-    <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
-        <span *ngFor="let num of arr; let i = index" attr.data-src="../../assets/img/4ever/{{i+1}}.jpg" >
-        <a *ngIf="![46,47,18,9,23,26].includes(i+1)"  href="../../assets/img/4ever/{{i+1}}.jpg">
-            <img alt="img1" src="../../assets/img/4ever/{{i+1}}.jpg" class="img-fluid"/>
+
+<div class="p-2 w-100 mt-5 mb-5 d-flex justify-content-center">
+      <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide" class="row">
+        <span *ngFor="let num of arr; let i = index" attr.data-src="../../assets/img/4ever/{{i+1}}.jpg" class="col-lg-4 col-md-4 col-xs-4 mb-4">
+        <a href="../../assets/img/4ever/{{i+1}}.jpg">
+            <img src="../../assets/img/4ever/{{i+1}}.jpg" class="img-fluid img-thumbnail d-block mx-auto gallery-image"/>
         </a>
     </span>
     </lightgallery>
+    
 </div>
+<div class="row justify-content-center mb-5">
+    <div class="col-2">
+        <button type="button" class="btn btn-primary btn-lg" onclick=" window.open('https://www.facebook.com/profile.php?id=61550070506240&sk=photos_by','_blank')">View More</button>
+    </div>
+</div>
+
 <app-footer></app-footer>
