@@ -21,8 +21,17 @@
                                         <select class="form-control" id="bar" [(ngModel)]="bar" (change)="getPrice()">
                                             <option value="Standard" selected>Standard</option>
                                             <option value="Premium">Premium</option>
+                                            <option value="Limited Bar">Limited Bar</option>
+                                            <option value="Cash Bar">Cash Bar</option>
                                         </select>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="col" *ngIf="this.bar === 'Limited Bar'">
+                                <div class="p-3">
+                                    <label for="guest">Add Amount to Bar</label>
+                                    <input type="number" min="50" max="10000" class="form-control" id="guest" [(ngModel)]="limitedBarAmount"
+                                        (keyup)="getPrice()">
                                 </div>
                             </div>
                             <div class="col">
@@ -236,7 +245,7 @@
             </div>
         </div>
         <div class="row mt-4">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title"> Sparkler Exit
@@ -246,7 +255,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title"> Ceramic White Place Setting
@@ -257,7 +266,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title"> Champagne Toast
