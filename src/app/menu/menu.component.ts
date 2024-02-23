@@ -15,12 +15,12 @@ export class MenuComponent implements OnInit {
     {
       title:'Appetizers',
       about:'Pretzels $1.50 \n Mozzarela Sticks $1.25 \n Veggie and Cheese Skewers $3.00 \n Spicy Cauliflower.85c \n Mac N Cheese Bites .85c \n Crab Rangoon. 95c \n Boneless Buffalo wings.85c \n Venerable and Cheese Tray $135.00',
-      image:'../../assets/img/catering.jpeg',
+      image:'../../assets/img/MozarellaSticks.jpeg',
     },
     {
       title:'Platted Dinners',
       about:'(all dinners are served with house salad)\n\n14 oz Ribeye Steak Dinner/ served with Creamy Mashed Potato and sweet maple glazed baby carrots. $30\n\n8oz Salmon served with Roasted Red Potato and medley vegetable. $20\n\nBraised Short Rib over Creamy Mashed Potato and Asparagus $25',
-      image:'../../assets/img/foodplate.jpeg',
+      image:'../../assets/img/cater.jpeg',
     }
   ]
   ngOnInit(): void {
