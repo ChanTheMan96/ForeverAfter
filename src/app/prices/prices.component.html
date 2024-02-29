@@ -22,15 +22,14 @@
                                             <option value="Standard" selected>Standard</option>
                                             <option value="Premium">Premium</option>
                                             <option value="Limited Bar">Limited Bar</option>
-                                            <option value="Cash Bar">Cash Bar</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="col" *ngIf="this.bar === 'Limited Bar'">
                                 <div class="p-3">
-                                    <label for="guest">Add Amount to Bar</label>
-                                    <input type="number" min="50" max="10000" class="form-control" id="guest" [(ngModel)]="limitedBarAmount"
+                                    <label for="bar">Add Amount to Bar</label>
+                                    <input type="number" min="1500" max="10000" class="form-control" id="bar" [(ngModel)]="limitedBarAmount"
                                         (keyup)="getPrice()">
                                 </div>
                             </div>

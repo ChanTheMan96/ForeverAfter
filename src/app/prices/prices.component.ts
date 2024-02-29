@@ -12,12 +12,16 @@ export class PricesComponent implements OnInit {
   bar = 'Standard';
   day = 'Weekend';
   all_selected_values: number[] = [];
-  limitedBarAmount = 0;
+  limitedBarAmount = 1500;
 
   ngOnInit(): void {
     this.getPrice();
   }
   getPrice() {
+    let barMin = this.limitedBarAmount;
+    if(barMin < 1500){
+      barMin = 1500;
+    }
     let addOns = 0;
     for (let i = 0; i < this.all_selected_values.length; i++) {
       addOns += this.all_selected_values[i];
@@ -28,7 +32,7 @@ export class PricesComponent implements OnInit {
     } else if (this.bar === 'Premium') {
       barPrice = 19
     } else if (this.bar === 'Limited Bar') {
-      barPrice = this.limitedBarAmount;
+      barPrice = barMin;
       this.total = ((this.day === 'Weekend') ? 3000 : 1500) + this.guest * 16 + (barPrice) + 250 + addOns;
       return;
     } else{
