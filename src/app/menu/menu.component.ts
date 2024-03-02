@@ -9,12 +9,12 @@ export class MenuComponent implements OnInit {
   menu = [
     {
       title:'Price',
-      about:'$16 + Tax: 07 + 15% Gratuicy \n The above prices include decorative plastic silverware, heavy duty plastic clear plates, all the condiments including bread and butter.',
+      about:'$16 + Tax: 07 + 15% Gratuity \n The above prices include decorative plastic silverware, heavy duty plastic clear plates, all the condiments including bread and butter.',
       image:'../../assets/img/plate.jpg',
     },
     {
       title:'Appetizers',
-      about:'Pretzels $1.50 \n Mozzarela Sticks $1.25 \n Veggie and Cheese Skewers $3.00 \n Spicy Cauliflower.85c \n Mac N Cheese Bites .85c \n Crab Rangoon. 95c \n Boneless Buffalo wings.85c \n Venerable and Cheese Tray $135.00',
+      about:'Pretzels $1.50 \n Mozzarella Sticks $1.25 \n Veggie and Cheese Skewers $3.00 \n Spicy Cauliflower.85c \n Mac N Cheese Bites .85c \n Crab Rangoon. 95c \n Boneless Buffalo wings.85c \n Venerable and Cheese Tray $135.00',
       image:'../../assets/img/MozarellaSticks.jpeg',
     },
     {
