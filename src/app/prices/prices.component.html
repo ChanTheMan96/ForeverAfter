@@ -59,17 +59,6 @@
                                 </button>
                                 <!--Collapsed content-->
                                 <div class="mt-3" id="collapseExample" mdbCollapse #basicCollapse="mdbCollapse">
-                                    <div class="form-check form-check-inline">
-                                        <input
-                                        (change)="onChange(150)"
-                                          mdbCheckbox
-                                          class="form-check-input"
-                                          type="checkbox"
-                                          id="inlineCheckbox1"
-                                          value="150"
-                                        />
-                                        <label class="form-check-label" for="inlineCheckbox1">Fog Entrance</label>
-                                      </div>
                                       <div class="form-check form-check-inline">
                                         <input
                                         (change)="onChange(200)"
@@ -88,17 +77,7 @@
                                           type="checkbox"
                                           value="200"
                                         />
-                                        <label class="form-check-label" >Cake Cutting</label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input
-                                        (change)="onChange(50)"
-                                          mdbCheckbox
-                                          class="form-check-input"
-                                          type="checkbox"
-                                          value="350"
-                                        />
-                                        <label class="form-check-label" >Sparkler Exit</label>
+                                        <label class="form-check-label">Cake Cutting</label>
                                       </div>
                                       <div class="form-check form-check-inline">
                                         <input
@@ -140,142 +119,23 @@
     </div>
 </div>
 
-<div class="text-center">
+<div class="mb-3">
     <div class="container">
-        <h2 class="mt-4 mb-4">Price List</h2>
-
         <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Hall Rental</h5>
-                        <h6>$3,000</h6>
-                    </div>
-                </div>
+            <div class="col">
+                <h2 class="mt-4 mb-4">Décor & Event Coordination</h2>
+                <p>We offer a variety of in-house decorations to enhance your event, ensuring a beautifully curated space tailored to your vision. Additionally, we have a carefully selected list of trusted local vendors who go above and beyond to provide exceptional services, from floral arrangements to custom decor and more.
+                </p>
+                <p>For a seamless experience, we also offer a dedicated Day-of Event Coordinator, available upon request, to manage logistics, oversee setup, and ensure everything runs smoothly so you can enjoy your special day stress-free.
+                </p>
             </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Weekday Hall Rental
-                        </h5>
-                        <h6>$1,500</h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Standard Bar</h5>
-                        <h6>$16 per person (+$3 for premium)</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Catering
-                        </h5>
-                        <h6>$16 per person</h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"> Bartender Fee
-                        </h5>
-                        <h6>$200</h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"> Bar Setup Fee
-                        </h5>
-                        <h6>
-                            $50</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="text-center pb-5">
-    <div class="container">
-        <h2 class="mt-4 mb-4">Add Ons</h2>
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"> Fog Entrance
-                        </h5>
-                        <h6>$150</h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"> Water Service
-
-                        </h5>
-                        <h6>$200</h6>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"> Cake Cutting
-                        </h5>
-                        <h6>$200</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"> Sparkler Exit
-
-                        </h5>
-                        <h6>$350</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"> Ceramic White Place Setting
-
-                        </h5>
-                        <h6>
-                            $4</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title"> Champagne Toast
-
-
-                        </h5>
-                        <h6>
-                            $2</h6>
-                    </div>
-                </div>
+            <div class="col">
+                <h2 class="mt-4 mb-4">Venue Rental Details & Inclusions</h2>
+                <p>Your venue rental includes access from 9:00 AM to 11:00 PM, with last call for alcohol at 10:45 PM. Additional hours can be arranged if needed. The rental comes with a beautifully set ceremony space with chairs, an elegant banquet hall with linens, and private suites for both the bride and groom. Complimentary soda, water, and tea are also included.
+                </p>
+                <p>
+                Please note that bartender fees, cleaning fees, and day-of-event insurance are not included in the rental price. Additionally, food and alcohol pricing are separate, and a bar minimum is required. Let us know if you have any special requests or need further details to tailor your experience!
+                </p>
             </div>
         </div>
     </div>
