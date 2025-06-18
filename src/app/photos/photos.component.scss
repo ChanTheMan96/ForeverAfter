@@ -2,9 +2,39 @@
 @import '../../../node_modules/lightgallery/scss/lg-zoom.scss';
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css');
 @import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css');
-.gallery-image {
-    height: 300px; /* Set your desired fixed height */
-    object-fit: cover;
+
+.gallery {
+    column-count: 1;
+    column-gap: 1rem;
+}
+
+@media (min-width: 576px) {
+    .gallery {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .gallery {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 992px) {
+    .gallery {
+        column-count: 4;
+    }
+}
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
 }
 
 .scroll-top {
