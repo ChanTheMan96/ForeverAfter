@@ -33,7 +33,6 @@ import { PricesComponent } from './prices/prices.component';
 import { FormsModule } from '@angular/forms';
 import { LightgalleryModule } from 'lightgallery/angular';
 import { HttpClientModule } from '@angular/common/http';
-import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -48,8 +47,7 @@ import { ContactComponent } from './contact/contact.component';
     FooterComponent,
     PhotosComponent,
     BarComponent,
-    PricesComponent,
-    ContactComponent
+    PricesComponent
   ],
   imports: [
     BrowserModule,
