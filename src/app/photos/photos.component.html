@@ -4,7 +4,7 @@
       <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide" class="row">
         <span *ngFor="let num of arr; let i = index" attr.data-src="../../assets/img/4ever/{{i+1}}.jpg" class="col-lg-4 col-md-4 col-xs-4 mb-4">
         <a href="../../assets/img/4ever/{{i+1}}.jpg">
-            <img src="../../assets/img/4ever/{{i+1}}.jpg" class="img-fluid img-thumbnail d-block mx-auto gallery-image" alt="Gallery image {{i + 1}}" loading="lazy"/>
+            <img src="../../assets/img/4ever/{{i+1}}.jpg" class="img-fluid img-thumbnail d-block mx-auto gallery-image" alt="Forever After gallery image {{i + 1}}" loading="lazy"/>
         </a>
     </span>
     </lightgallery>
@@ -12,8 +12,12 @@
 </div>
 <div class="d-flex justify-content-center mb-5">
     <div>
-        <button type="button" class="btn btn-primary btn-lg" onclick=" window.open('https://www.facebook.com/profile.php?id=61550070506240&sk=photos_by','_blank')">View More</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick=" window.open('https://www.facebook.com/profile.php?id=61550070506240&sk=photos_by','_blank')" aria-label="View more photos on Facebook">View More</button>
     </div>
 </div>
+
+<button class="btn btn-secondary scroll-top" (click)="scrollToTop()" *ngIf="showScrollTopButton" aria-label="Back to top">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+</button>
 
 <app-footer></app-footer>

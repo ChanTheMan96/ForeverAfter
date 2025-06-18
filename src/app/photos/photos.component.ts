@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { BeforeSlideDetail } from 'lightgallery/lg-events';
 import lgZoom from 'lightgallery/plugins/zoom';
 
@@ -13,15 +13,24 @@ export class PhotosComponent {
     counter: false,
     plugins: [lgZoom],
   };
+  showScrollTopButton = false;
   onBeforeSlide = (detail: BeforeSlideDetail): void => {
     const { index, prevIndex } = detail;
     console.log(index, prevIndex);
   };
 
   logCondition(value: number): boolean {
-    console.log(value)
+    console.log(value);
     console.log('Condition Check:', ![18].includes(value));
     return ![18].includes(value);
   }
 
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    this.showScrollTopButton = window.pageYOffset > 300;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

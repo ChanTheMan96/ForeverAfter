@@ -6,3 +6,11 @@
     height: 300px; /* Set your desired fixed height */
     object-fit: cover;
 }
+
+.scroll-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 50%;
+    padding: 0.5rem 0.6rem;
+}
