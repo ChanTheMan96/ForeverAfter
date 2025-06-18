@@ -2,8 +2,8 @@
 
 <div class="p-2 w-100 mt-5 mb-1 d-flex justify-content-center">
     <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide" class="gallery">
-        <a *ngFor="let num of arr; let i = index" class="gallery-item" attr.data-src="../../assets/img/4ever/{{i+1}}.jpg">
-            <img src="../../assets/img/4ever/{{i+1}}.jpg" alt="Forever After gallery image {{i + 1}}" loading="lazy" />
+        <a *ngFor="let num of arr" class="gallery-item" attr.data-src="../../assets/img/4ever/{{num}}.jpg">
+            <img src="../../assets/img/4ever/{{num}}.jpg" alt="Forever After gallery image {{num}}" loading="lazy" />
         </a>
     </lightgallery>
 </div>
