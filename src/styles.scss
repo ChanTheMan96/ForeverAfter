@@ -7,10 +7,11 @@
 @import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
 
 :root {
-    --primary-color: #0d6efd;
-    --secondary-color: #ffffff;
-    --text-color: #ffffff;
-    --bg-color: #000000;
+    /* Main color palette updated to black, white and rust */
+    --primary-color: #b7410e; /* rust */
+    --secondary-color: #ffffff; /* white */
+    --text-color: #ffffff; /* white */
+    --bg-color: #000000; /* black */
     --font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
 }
