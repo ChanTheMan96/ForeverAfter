@@ -30,6 +30,7 @@ import { FooterComponent } from './footer/footer.component';
 import { PhotosComponent } from './photos/photos.component';
 import { BarComponent } from './bar/bar.component';
 import { PricesComponent } from './prices/prices.component';
+import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
 import { LightgalleryModule } from 'lightgallery/angular';
 import { HttpClientModule } from '@angular/common/http';
@@ -47,7 +48,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     PhotosComponent,
     BarComponent,
-    PricesComponent
+    PricesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
