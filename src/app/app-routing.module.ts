@@ -5,14 +5,16 @@ import { HomeComponent } from './home/home.component';
 import { PhotosComponent } from './photos/photos.component';
 import { BarComponent } from './bar/bar.component';
 import { PricesComponent } from './prices/prices.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'photo', component: PhotosComponent},
   { path: 'bar', component: BarComponent},
-  { path: 'prices', component: PricesComponent }
-  
+  { path: 'prices', component: PricesComponent },
+  { path: 'contact', component: ContactComponent }
+
 ];
 
 @NgModule({

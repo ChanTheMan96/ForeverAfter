@@ -32,6 +32,8 @@ import { BarComponent } from './bar/bar.component';
 import { PricesComponent } from './prices/prices.component';
 import { FormsModule } from '@angular/forms';
 import { LightgalleryModule } from 'lightgallery/angular';
+import { HttpClientModule } from '@angular/common/http';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { LightgalleryModule } from 'lightgallery/angular';
     FooterComponent,
     PhotosComponent,
     BarComponent,
-    PricesComponent
+    PricesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +71,8 @@ import { LightgalleryModule } from 'lightgallery/angular';
     MdbValidationModule,
     BrowserAnimationsModule,
     FormsModule,
-    LightgalleryModule
+    LightgalleryModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
