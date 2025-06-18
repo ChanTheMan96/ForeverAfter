@@ -8,7 +8,16 @@ import lgZoom from 'lightgallery/plugins/zoom';
   styleUrls: ['./photos.component.scss']
 })
 export class PhotosComponent {
-  arr = new Array(42);
+  // Explicitly list image numbers so that the display order can
+  // be customized if needed. Move image 28 to the end of the array
+  // to ensure it is not adjacent to image 15 in the rendered gallery.
+  arr: number[] = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+    11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+    21, 22, 23, 24, 25, 26, 27,
+    29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42,
+    28
+  ];
   settings = {
     counter: false,
     plugins: [lgZoom],
