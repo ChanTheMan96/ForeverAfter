@@ -1,0 +1,25 @@
+<app-nav></app-nav>
+<div class="contact-page container mt-5 pt-5 text-center">
+  <h1>Schedule a Tour</h1>
+  <p class="mb-4">Get in touch and we'll plan your perfect event.</p>
+  <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+    <div class="mb-3 text-start">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" required [(ngModel)]="name" name="name">
+    </div>
+    <div class="mb-3 text-start">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" required [(ngModel)]="email" name="email">
+    </div>
+    <div class="mb-3 text-start">
+      <label class="form-label">Event Date</label>
+      <input type="date" class="form-control" [(ngModel)]="eventDate" name="eventDate">
+    </div>
+    <div class="mb-3 text-start">
+      <label class="form-label">Message</label>
+      <textarea class="form-control" rows="4" [(ngModel)]="message" name="message"></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit">Send</button>
+  </form>
+</div>
+<app-footer></app-footer>
