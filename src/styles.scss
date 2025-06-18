@@ -7,8 +7,8 @@
 @import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
 
 :root {
-    /* Main color palette updated to black, white and rust */
-    --primary-color: #b7410e; /* rust */
+    /* Main color palette updated to black, white and gold */
+    --primary-color: #FFD700; /* gold */
     --secondary-color: #ffffff; /* white */
     --text-color: #ffffff; /* white */
     --bg-color: #000000; /* black */
@@ -26,4 +26,17 @@ body {
     font-family: var(--font-family);
     background-color: var(--bg-color);
     color: var(--text-color);
+}
+
+/* Button color overrides */
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--bg-color) !important;
+}
+
+.btn-secondary {
+    background-color: var(--bg-color) !important;
+    border-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
 }
